@@ -1,0 +1,54 @@
+$base-font: Verdana,
+Geneva,
+Tahoma,
+sans-serif;
+$base-color: #282c34;
+.colorFliper,
+.counter {
+    font-family: $base-font;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: auto;
+    h3 {
+        font-family: $base-font;
+        font-size: 16px;
+        padding: 15px 30px;
+        background: $base-color;
+        color: white;
+    }
+    button {
+        font-family: $base-font;
+        padding: 15px 20px;
+        width: 100%;
+        background: $base-color;
+        font-weight: bold;
+        font-size: 16px;
+        margin: auto;
+        color: white;
+        border: unset;
+        transition: 0.5s;
+        &:hover {
+            background: #404753;
+            transition: 0.5s;
+        }
+    }
+    .inputRow {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        margin: 16px 0px;
+        div {
+            padding: 15px 20px;
+            background: $base-color;
+            color: white;
+            transition: 0.5s;
+            &:hover {
+                background: #404753;
+                transition: 0.5s;
+            }
+        }
+    }
+}

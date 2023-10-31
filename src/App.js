@@ -16,6 +16,7 @@ import {
   Route,
   NavLink 
 } from "react-router-dom";
+import ReviewCarousel from './views/reviewCarousel/reviewCarousel';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
             </li>
             <li>
               <NavLink activeClassName="active" to="/users">users</NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="active" to="/views/reviewcarousel">Review Carousel</NavLink>
             </li>
             <li>
               <NavLink activeClassName="active" to="">Home</NavLink>
@@ -51,6 +55,9 @@ function App() {
           </Route>
           <Route path="/views/counter">
             <Counter />
+          </Route>
+          <Route path="/views/reviewcarousel">
+            <ReviewCarousel />
           </Route>
           <Route path="/users">
             <Users />

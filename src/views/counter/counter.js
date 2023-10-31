@@ -10,6 +10,7 @@ export default class Counter extends React.Component {
             counter: false
         }
     }
+    
     increase = (e) => {
         this.setState({
             number: this.state.number + 1,

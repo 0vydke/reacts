@@ -1,0 +1,61 @@
+$base-font: Verdana,
+Geneva,
+Tahoma,
+sans-serif;
+$base-color: #282c34;
+.carousel{
+    font-family: $base-font;
+    background-color: #d3e1e2;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.card{
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px -8px;
+    background: white;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    .photo{
+        border-radius: 150px;
+        width: 140px;
+        height: 140px;
+        box-shadow: 7px -3px rgb(47, 183, 224);
+    }
+    h4{
+        margin: 10px 0 0 0;
+        letter-spacing: 2px;
+    }
+    h5{
+        margin: 0;
+        color: rgb(47, 183, 224);
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    p{
+        font-size: 13px;
+        max-width: 400px;
+        margin: 15px auto 5px;
+    }
+    .arrows{
+        button{
+            border: unset;
+            background: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    button{
+        border-radius: 4px;
+        border: 2px solid rgb(47, 183, 224);
+        background: rgb(200, 241, 253);
+        color: rgb(47, 183, 224);
+        font-size: 12px;
+        padding: 3px 7px;
+        margin-top: 5px;
+    }
+}
+

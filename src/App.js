@@ -1,4 +1,5 @@
-import './App.css';
+import React from 'react';
+import './App.scss';
 import Colorfliper from './views/colorfliper/colorFliper';
 import Counter from './views/counter/counter';
 import './assets/css/animations.css';
@@ -10,41 +11,49 @@ import {
   Route
 } from "react-router-dom";
 import ReviewCarousel from './views/reviewCarousel/reviewCarousel';
-import Navbar from './components/navbar/navbar';
+import Sidebar from './components/sidebar/sidebar';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Navbar></Navbar>
-        <Switch>
-          <Route path="/views/colorfliper">
-            <Colorfliper />
-          </Route>
-          <Route path="/views/counter">
-            <Counter />
-          </Route>
-          <Route path="/views/reviewcarousel">
-            <ReviewCarousel />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
+import menu from './assets/img/icons/menu.svg';
 
-function Home() {
-  return <h2>Home</h2>;
-}
 
-function Users() {
-  return <h2>Users</h2>;
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.sidebarComponent = React.createRef();
+  }
+  
+  toggleSidebar = () => {
+    this.sidebarComponent.current.toggleSidebar();
+  }
+  
+  render(){
+    return (
+      <Router>
+        <div className="App">
+          <Sidebar ref={this.sidebarComponent}></Sidebar>
+          <div className="content">
+            <button onClick={this.toggleSidebar}>
+              <img src={menu} alt="" />
+            </button>
+            <Switch>
+              <Route path="/views/colorfliper">
+                <Colorfliper />
+              </Route>
+              <Route path="/views/counter">
+                <Counter />
+              </Route>
+              <Route path="/views/reviewcarousel">
+                <ReviewCarousel />
+              </Route>
+              <Route path="">
+                {/* <Home /> */}
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

@@ -44,9 +44,11 @@
     text-align: center;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
-
+.content{
+    width: 100%;
+}
 
 .App-logo {
     height: 40vmin;

@@ -10,13 +10,19 @@ import linkin from '../../assets/img/icons/linkin.svg';
 import git from '../../assets/img/icons/git.svg';
 import menu from '../../assets/img/icons/menu.svg';
 import logo from '../../assets/img/logo192.png';
+import MenuLinks from '../menuLinks/menuLinks';
 
 export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
+        this.menuComponent = React.createRef();
         this.state = {
             showMenu: false,
         }
+    }
+      
+    toggleSidebar = () => {
+    
     }
     
     toggleNavbar(nextState){
@@ -24,6 +30,7 @@ export default class Navbar extends React.Component {
         this.setState({
             showMenu: nextState
         });
+        this.sidebarComponent.current.toggleMenu();
         console.log(this.state.showMenu)
     }
 
@@ -36,32 +43,15 @@ export default class Navbar extends React.Component {
                         <img className="logo" src={logo} alt="Logo Place"/>
                         <button className='nav-toggle' onClick={() => this.toggleNavbar(!showMenu)}><img src={menu} alt=""/></button>
                     </div>
-                    <ul className={"links " + (showMenu ? 'show' : 'hidden')}>
-                        <li>
-                            <NavLink activeClassName="active" to="/views/colorfliper">Color Fliper</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeClassName="active" to="/views/counter">Counter</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeClassName="active" to="/users">users</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeClassName="active" to="/views/reviewcarousel">Review Carousel</NavLink>
-                        </li>
-                        <li>
-                            <NavLink activeClassName="active" to="">Home</NavLink>
-                        </li>
-                        <div className="social-icons">
-                            <a href="https://www.facebook.com/ovydke/" rel='noreferrer' target='_blank'><img src={fb} alt="facebook icon"/></a>
-                            <a href="https://www.linkedin.com/in/ovidijus-mykolaitis-468750190/" rel='noreferrer' target='_blank'><img src={linkin} alt="linkedin icon"/></a>
-                            <a href="https://www.instagram.com/ovydke/" rel='noreferrer' target='_blank'><img src={ig} alt="instagram icon"/></a>
-                            <a href="https://github.com/0vydke" rel='noreferrer' target='_blank'><img src={git} alt="git repo icon"/></a>
-                        </div>
-                    </ul>
-                    
-            </div>
-          </nav>
+                    <MenuLinks ref={this.menuComponent}></MenuLinks>
+                    <div className="social-icons">
+                        <a href="https://www.facebook.com/ovydke/" rel='noreferrer' target='_blank'><img src={fb} alt="facebook icon"/></a>
+                        <a href="https://www.linkedin.com/in/ovidijus-mykolaitis-468750190/" rel='noreferrer' target='_blank'><img src={linkin} alt="linkedin icon"/></a>
+                        <a href="https://www.instagram.com/ovydke/" rel='noreferrer' target='_blank'><img src={ig} alt="instagram icon"/></a>
+                        <a href="https://github.com/0vydke" rel='noreferrer' target='_blank'><img src={git} alt="git repo icon"/></a>
+                    </div>
+                </div>
+            </nav>
         );
     }
 }  

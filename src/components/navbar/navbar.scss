@@ -9,23 +9,6 @@ nav {
     z-index: 1;
     background: var(--clr-white);
     box-shadow: var(--light-shadow);
-    ul {
-        text-decoration: unset;
-        list-style: none;
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        justify-content: space-around;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .logo {
-        max-width: 200px;
-    }
 }
 .nav-center {
     width: 100%;

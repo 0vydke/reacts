@@ -14,6 +14,8 @@ import ReviewCarousel from './views/reviewCarousel/reviewCarousel';
 import Sidebar from './components/sidebar/sidebar';
 
 import menu from './assets/img/icons/menu.svg';
+import Navbar from './components/sidebar/sidebar';
+import Home from './views/home/home';
 
 
 class App extends React.Component {
@@ -30,6 +32,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
+          {/* <Navbar></Navbar> */}
           <Sidebar ref={this.sidebarComponent}></Sidebar>
           <div className="content">
             <button onClick={this.toggleSidebar}>
@@ -46,7 +49,7 @@ class App extends React.Component {
                 <ReviewCarousel />
               </Route>
               <Route path="">
-                {/* <Home /> */}
+                <Home></Home>
               </Route>
             </Switch>
           </div>

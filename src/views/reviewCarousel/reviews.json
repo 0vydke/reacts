@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "John Miller",
+    "job": "Developer",
+    "description": "John is a developer who specializes in web and mobile app development. He enjoys coding and building innovative software solutions."
+  },
+  {
+    "id": 1,
+    "name": "Mark Fellsworth",
+    "job": "Graphic Designer",
+    "description": "Alice is a graphic designer with a passion for creating stunning visuals. She designs logos, posters, and web graphics."
+  },
+  {
+    "id": 2,
+    "name": "David Johnson",
+    "job": "Data Analyst",
+    "description": "David is a data analyst who loves crunching numbers and extracting insights from data. He's skilled in data science and statistics."
+  },
+  {
+    "id": 3,
+    "name": "Emily Davis",
+    "job": "Marketing Manager",
+    "description": "Emily is a marketing manager who excels in developing marketing strategies and campaigns. She's a creative thinker and a leader in her field."
+  }
+]

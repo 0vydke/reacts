@@ -1,12 +1,13 @@
 @import '/src/assets/scss/fonts.scss';
-@import '/src/assets/scss/buttons.scss';
+@import '/src/assets/scss/inputs.scss';
+@import '/src/assets/scss/variables.scss';
 
 .App {
     text-align: center;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: #161616;
+    background-color: $background;
     color: white;
 }
 .content{

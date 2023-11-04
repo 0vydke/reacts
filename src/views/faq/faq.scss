@@ -1,0 +1,46 @@
+@import '/src/assets/scss/variables.scss';
+.faq{
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    .questions{
+        margin: auto;
+        display: flex;
+        flex-flow: column;
+        max-width: 600px;
+        gap: 10px;
+    }
+    .question{
+        max-height: 40px;
+        overflow: hidden;
+        padding: 10px;
+        position: relative;
+        background: $background-light;
+        border-radius: 10px;
+        transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        h5{
+            font-size: 20px;
+            margin: 5px 0;
+            text-align: left;
+            width: calc(100% - 45px);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        p{
+            text-align: left;
+            margin-top: 20px;
+        }
+        &.open{
+            max-height: 500px;
+            transition: max-height 0.7s ease-in;
+            h5{
+                white-space:unset;
+            }
+        }
+    }
+    .checkbox-container{
+        margin: 20px auto;
+    }
+}

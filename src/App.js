@@ -14,10 +14,11 @@ import ReviewCarousel from './views/reviewCarousel/reviewCarousel';
 import Sidebar from './components/sidebar/sidebar';
 
 import menu from './assets/img/icons/menu.svg';
-import Navbar from './components/sidebar/sidebar';
+import modal from './assets/img/icons/modal.svg';
 import Home from './views/home/home';
 import Modal from './components/modal/modal';
 import Faq from './views/faq/faq';
+import Navbar from './components/navbar/navbar';
 
 
 class App extends React.Component {
@@ -40,14 +41,14 @@ class App extends React.Component {
       <Router>
         <Modal ref={this.modalComponent}></Modal>
         <div className="App">
-          {/* <Navbar></Navbar> */}
           <Sidebar ref={this.sidebarComponent}></Sidebar>
+          {/* <Navbar></Navbar> */}
           <div className="content">
-            <button onClick={this.toggleSidebar}>
+            <button className='menu' onClick={this.toggleSidebar}>
               <img src={menu} alt="" />
             </button>
-            <button onClick={this.openModal}>
-              Modal
+            <button className='modal-toggle' onClick={this.openModal}>
+              <img src={modal} alt="" />
             </button>
             <Switch>
               <Route path="/views/colorfliper">

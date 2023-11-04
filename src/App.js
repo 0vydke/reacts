@@ -15,10 +15,10 @@ import Sidebar from './components/sidebar/sidebar';
 
 import menu from './assets/img/icons/menu.svg';
 import modal from './assets/img/icons/modal.svg';
+// import Navbar from './components/sidebar/sidebar';
 import Home from './views/home/home';
 import Modal from './components/modal/modal';
 import Faq from './views/faq/faq';
-import Navbar from './components/navbar/navbar';
 
 
 class App extends React.Component {
@@ -41,8 +41,8 @@ class App extends React.Component {
       <Router>
         <Modal ref={this.modalComponent}></Modal>
         <div className="App">
-          <Sidebar ref={this.sidebarComponent}></Sidebar>
           {/* <Navbar></Navbar> */}
+          <Sidebar ref={this.sidebarComponent}></Sidebar>
           <div className="content">
             <button className='menu' onClick={this.toggleSidebar}>
               <img src={menu} alt="" />

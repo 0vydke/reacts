@@ -38,7 +38,7 @@ export default class Modal extends React.Component {
                     <div className="header">
                         <img src={link} alt="" />
                         <h6>{ this.state.headerText }</h6>
-                        <button onClick={this.closeModal}>x</button>
+                        <button className='close' onClick={this.closeModal}>x</button>
                     </div>
                 
                     <div className="body">
@@ -61,7 +61,7 @@ export default class Modal extends React.Component {
                         }
                     </div>
                     <div className="footer">
-                        <button className='submit'>Connect Integration</button>
+                        <button type='submit' className='submit'>Connect Integration</button>
                     </div>
                 </div>
             </div>

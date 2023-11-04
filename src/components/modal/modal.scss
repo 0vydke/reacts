@@ -4,7 +4,7 @@
     height: 100%;
     z-index: 1000;
     position: absolute;
-    background-color: rgba(65, 65, 65, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     display: none;
     &.show{
         display: flex;
@@ -34,25 +34,6 @@
             height: 20px;
             filter: invert(1);
             margin: auto 10px;
-        }
-        button{
-            top: 10px;
-            right: 10px;
-            width: 35px;
-            height: 35px;
-            color: #878787;
-            font-size: 25px;
-            background: none;
-            position: absolute;
-            line-height: 23px;
-            transition: 0.1s;
-            border-radius: 10px;
-            font-family: $app-font;
-            border: 1px solid #878787;
-            &:hover{
-                color: white;
-                border-color: white;
-            }
         }
     }
     .body{
@@ -92,20 +73,5 @@
     .footer{
         border-radius: 0 0 20px 20px;
         padding: 10px 20px 20px;
-        button.submit{
-            font-family: $app-font;
-            font-size: 20px;
-            font-weight: 600;
-            border: 0;
-            border-radius: 10px;
-            width: 100%;
-            color: white;
-            padding: 10px;
-            transition: 0.1s;
-            background-color: #2c4fe3;
-            &:hover{
-                background-color: #667fec;
-            }
-        }
     }
 }

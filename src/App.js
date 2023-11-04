@@ -17,6 +17,7 @@ import menu from './assets/img/icons/menu.svg';
 import Navbar from './components/sidebar/sidebar';
 import Home from './views/home/home';
 import Modal from './components/modal/modal';
+import Faq from './views/faq/faq';
 
 
 class App extends React.Component {
@@ -57,6 +58,9 @@ class App extends React.Component {
               </Route>
               <Route path="/views/reviewcarousel">
                 <ReviewCarousel />
+              </Route>
+              <Route path="/views/faq">
+                <Faq />
               </Route>
               <Route path="">
                 <Home></Home>

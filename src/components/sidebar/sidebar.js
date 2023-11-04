@@ -30,7 +30,7 @@ export default class Navbar extends React.Component {
             <aside className={"sidebar " + (showMenu ? 'show' : 'hidden')}>
                 <div className="header">
                     <img src={logo} alt="" />
-                    <button onClick={this.toggleSidebar}>X</button>
+                    <button className='close' onClick={this.toggleSidebar}>X</button>
                 </div>
                 <MenuLinks></MenuLinks>
                 <div className="social-icons">

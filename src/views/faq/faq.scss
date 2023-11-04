@@ -1,0 +1,19 @@
+.faq{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    .questions{
+        margin: auto;
+        display: flex;
+        flex-flow: column;
+        
+    }
+    .question{
+        max-height: 50px;
+        overflow: hidden;
+        h5{
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+}

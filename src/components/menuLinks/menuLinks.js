@@ -35,6 +35,9 @@ export default class MenuLinks extends React.Component {
                 <li>
                     <NavLink activeClassName="active" to="/views/faq">FAQ</NavLink>
                 </li>
+                <li>
+                    <NavLink activeClassName="active" to="/views/restaurant">Restaurant</NavLink>
+                </li>
             </ul>
         );
     }

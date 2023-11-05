@@ -41,28 +41,6 @@
         flex-flow: column;
         padding: 15px 20px 20px;
         justify-content: center;
-        .button-holder{
-            border: 0;
-            border-radius: 10px;
-            height: 35px;
-            display: flex;
-            justify-content: center;
-            padding: 5px;
-            background-color: #222222;
-            button{
-                border: 0;
-                border-radius: 10px;
-                background: none;
-                color: #878787;
-                font-family: $app-font;
-                flex: 1;
-                transition: 0.2s;
-                &.enabled{
-                    color: white;
-                    background-color: #1a1a1a;
-                }
-            }
-        }
         p{
             color: #878787;
             font-size: 14px;

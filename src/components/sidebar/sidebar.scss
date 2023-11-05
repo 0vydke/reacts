@@ -6,7 +6,9 @@ aside{
     background: $background-light;
     transition: 0.2s;
     overflow: hidden;
-    position: relative;
+    position: sticky;
+    top: 0;
+    height: 100vh;
     &.hidden{
         width: 0px;
     }

@@ -19,6 +19,7 @@ import modal from './assets/img/icons/modal.svg';
 import Home from './views/home/home';
 import Modal from './components/modal/modal';
 import Faq from './views/faq/faq';
+import Restaurant from './views/restaurant/restaurant';
 
 
 class App extends React.Component {
@@ -62,6 +63,9 @@ class App extends React.Component {
               </Route>
               <Route path="/views/faq">
                 <Faq />
+              </Route>
+              <Route path="/views/restaurant">
+                <Restaurant />
               </Route>
               <Route path="">
                 <Home></Home>

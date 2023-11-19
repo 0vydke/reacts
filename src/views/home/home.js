@@ -3,8 +3,8 @@ import React from 'react';
 import './home.scss';
 import MenuLinks from '../../components/menuLinks/menuLinks';
 
-
 import video from '../../assets/video/glitch.mp4';
+import Tabs from '../../components/tabs/tabs';
 
 
 export default class Home extends React.Component {
@@ -36,13 +36,14 @@ export default class Home extends React.Component {
       <div className="fade-in home" >
         <div className="holder">
           <MenuLinks></MenuLinks>
-          <video ref={this.getVideo}  className='videoTag' autoPlay loop muted>
+          {/* <video ref={this.getVideo}  className='videoTag' autoPlay loop muted>
               <source src={video} type='video/mp4' />
-          </video>
+          </video> */}
         </div>
-          <button onClick={this.toggleVideo} className='videoToggle'>
+        <Tabs></Tabs>
+          {/* <button onClick={this.toggleVideo} className='videoToggle'>
             {this.state.play ? 'Play' : 'Stop'}
-          </button>
+          </button> */}
       </div>
     );
   }

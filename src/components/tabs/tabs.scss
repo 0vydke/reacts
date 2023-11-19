@@ -1,0 +1,51 @@
+@import '/src/assets/scss/variables.scss';
+.tab-holder{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: $background-light;
+    border-radius: 10px;
+}
+.tab-header{
+    margin-bottom: 40px;
+    h5,
+    h3{
+        margin: 5px auto;
+    }
+}
+.tab-content{
+    display: flex;
+    gap: 10px;
+    .image-content,
+    .side-content {
+        flex: 1;
+    }
+}
+.image-content{
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.side-content{
+    .tabs{
+        display: flex;
+        button{
+            flex:1;
+            color: white;
+            border-radius: 0;
+            border: solid 1px transparent;
+            background: $background;
+            &:hover,&.active{
+                border: solid 1px white;
+                background: $background-light;
+            }
+        }
+    }
+    .content{
+        text-align: left;
+        padding: 10px;
+    }
+}
